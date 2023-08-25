@@ -1,0 +1,182 @@
+'use client'
+import React from "react";
+import styles from './page.module.scss';
+import TypeIt from "typeit-react";
+import { motion } from "framer-motion";
+
+
+
+export default function Navbar() {
+
+    const beforeInit = (instance: any) => {
+        instance
+            .type("Guilherme Duaret")
+            .pause(250)
+            .delete(2)
+            .pause(200)
+            .type("te.")
+            .pause(5000);
+
+
+        return instance;
+    };
+
+    return (
+        <section className={styles.navbar}>
+            <div className={styles.conteudo}>
+                <div className={styles.logo}>
+                    <TypeIt options={{ loop: true, speed: 150 }} getBeforeInit={(instance) => beforeInit(instance)} />
+                </div>
+                <div className={styles.links}>
+                    <a href="/">Curriculo</a>
+                    <a href="/sobre">Sobre</a>
+                    <a href="/portifolio">Projetos</a>
+                    <a href="/experiencia">Experiencia</a>
+                    <a href="/certificacoes">Certificados</a>
+                    <a href="/contato">Contato</a>
+                </div>
+            </div>
+            <div className={styles.background}>
+                <div className="custom-animated-circles">
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                </div>
+
+                <div className={styles.imagem1}>
+                    <motion.div
+                        className="box"
+                        initial={{ opacity: 1 }}
+                        animate={{
+                            rotate: [0, 20, 0, -20, 0],
+                            x: [0, 5, 5, 0, 0]
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 2,
+                            times: [0, 0.2, 0.5, 0.8, 1],
+                            repeat: Infinity,
+                            repeatDelay: 1
+                        }}
+
+                    >
+                        <img src="/images/1.svg" alt="" />
+                    </motion.div>
+                </div>
+                <div className={styles.imagem2}>
+                    <motion.div
+                        className="box"
+                        initial={{ opacity: 1 }}
+                        animate={{
+                            rotate: [0, 60, 120, 180, 240, 300, 360]
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 2,
+                            times: [0.2, 0.4, 0.6, 0.8, 1],
+                            repeat: Infinity,
+                            repeatDelay: 1
+                        }}
+
+                    >
+                        <img src="/images/2.svg" alt="" />
+                    </motion.div>
+
+                </div>
+                <div className={styles.imagem3}>
+                    <motion.div
+                        className="box"
+                        initial={{ opacity: 1 }}
+                        animate={{
+                            y: [0, 5, 5, 0, 0],
+                            opacity: [1, 0.5, 0.5, 1, 1]
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 2,
+                            times: [0, 0.2, 0.5, 0.8, 1],
+                            repeat: Infinity,
+                            repeatDelay: 1
+                        }}
+
+                    >
+                        <img src="/images/3.svg" alt="" />
+                    </motion.div>
+
+                </div>
+                <div className={styles.imagem4}>
+                    <motion.div
+                        className="box"
+                        initial={{ opacity: 1 }}
+                        animate={{
+                            scale: [0.8, 1.2, 0.8]
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 2,
+                            times: [0, 1, 2],
+                            repeat: Infinity,
+                            repeatDelay: 1
+                        }}
+
+                    >
+                        <img src="/images/4.svg" alt="" />
+                    </motion.div>
+
+                </div>
+                <div className={styles.imagem5}>
+                        <img src="/images/5.svg" alt="" />
+
+                </div>
+
+                <div className={styles.imagem6}>
+                    <motion.div
+                        className="box"
+                        initial={{ opacity: 1 }}
+                        animate={{
+                            rotate: [0, 20, 0, -20, 0],
+                            x: [0, 5, 5, 0, 0]
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 2,
+                            times: [0, 0.2, 0.5, 0.8, 1],
+                            repeat: Infinity,
+                            repeatDelay: 1
+                        }}
+
+                    >
+                        <img src="/images/1.svg" alt="" />
+                    </motion.div>
+                </div>
+
+                <div className={styles.imagem7}>
+                    <motion.div
+                        className="box"
+                        initial={{ opacity: 1 }}
+                        animate={{
+                            rotate: [0, 60, 120, 180, 240, 300, 360]
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 2,
+                            times: [0.2, 0.4, 0.6, 0.8, 1],
+                            repeat: Infinity,
+                            repeatDelay: 1
+                        }}
+
+                    >
+                        <img src="/images/2.svg" alt="" />
+                    </motion.div>
+
+                </div>
+
+                <div className={styles.imagem8}>
+                        <img src="/images/5.svg" alt="" />
+
+                </div>
+            </div>
+        </section>
+    )
+}

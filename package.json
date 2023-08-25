@@ -9,12 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@react-spring/web": "^9.7.3",
     "@types/node": "20.5.3",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "bootstrap": "^5.3.1",
+    "framer-motion": "^10.16.1",
     "next": "13.4.19",
     "react": "18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
+    "react-popper": "^2.3.0",
+    "react-toastify": "^9.1.3",
+    "sass": "^1.66.1",
+    "typeit-react": "^2.6.4",
     "typescript": "5.1.6"
   }
 }
