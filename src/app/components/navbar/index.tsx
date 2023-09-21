@@ -1,12 +1,37 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import styles from './page.module.scss';
 import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
-
+import { BsList } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
+import { Stint_Ultra_Condensed } from "next/font/google";
 
 
 export default function Navbar() {
+
+    const [isActive, setIsActive] = useState(true);
+
+    // monitorando o useState para adicionar a classe none ao navbar quando ele estiver ativo
+    const mudanavbar = () => {
+        setIsActive(!isActive);
+        const navbar = document.getElementsByClassName(styles.navbar)[0] as HTMLElement;
+        const conteudo = document.getElementsByClassName(styles.conteudo)[0] as HTMLElement;
+        if (isActive) {
+            navbar.style.height = "100vh";
+            navbar.style.borderBottomLeftRadius = "0px";
+            navbar.style.borderBottomRightRadius = "0px";
+            conteudo.style.position = "fixed";
+            conteudo.style.backgroundColor = "black";
+        } else {
+            navbar.style.height = "70vh";
+            navbar.style.borderBottomLeftRadius = "50% 40px";
+            navbar.style.borderBottomRightRadius = "50% 40px";
+            conteudo.style.position = "absolute";
+            conteudo.style.backgroundColor = "transparent";
+        }
+    }
+
 
     const beforeInit = (instance: any) => {
         instance
@@ -24,10 +49,33 @@ export default function Navbar() {
     return (
         <section className={styles.navbar}>
             <div className={styles.conteudo}>
-                <div className={styles.logo}>
+                <div className={isActive ? styles.logo : styles.none}>
                     <TypeIt options={{ loop: true, speed: 150 }} getBeforeInit={(instance) => beforeInit(instance)} />
                 </div>
-                <div className={styles.links}>
+                <div className={styles.menu} onClick={() => mudanavbar()}>
+                    <div className={styles.menuIcon}>
+                        {/* se estiver ativo o icone sera diferente do inativo */}
+                        <div className={isActive ? styles.menuIconActive : styles.menuIconInactive}>
+                            <i>
+                                <BsList />
+                            </i>
+                        </div>
+                        <div className={isActive ? styles.menuIconInactive : styles.menuIconActive}>
+                            <i>
+                                <AiOutlineClose />
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div className={isActive? styles.none : styles.linksMobile}>
+                    <a href="/">Curriculo</a>
+                    <a href="/sobre">Sobre</a>
+                    <a href="/portifolio">Projetos</a>
+                    <a href="/experiencia">Experiencia</a>
+                    <a href="/certificacoes">Certificados</a>
+                    <a href="/contato">Contato</a>
+                </div>
+                <div className={isActive? styles.links : styles.none}>
                     <a href="/">Curriculo</a>
                     <a href="/sobre">Sobre</a>
                     <a href="/portifolio">Projetos</a>
@@ -36,7 +84,7 @@ export default function Navbar() {
                     <a href="/contato">Contato</a>
                 </div>
             </div>
-            <div className={styles.background}>
+            <div className={isActive ? styles.background : styles.none}>
                 <div className="custom-animated-circles">
                     <div className="circle"></div>
                     <div className="circle"></div>
@@ -126,7 +174,7 @@ export default function Navbar() {
 
                 </div>
                 <div className={styles.imagem5}>
-                        <img src="/images/5.svg" alt="" />
+                    <img src="/images/5.svg" alt="" />
 
                 </div>
 
@@ -173,7 +221,7 @@ export default function Navbar() {
                 </div>
 
                 <div className={styles.imagem8}>
-                        <img src="/images/5.svg" alt="" />
+                    <img src="/images/5.svg" alt="" />
 
                 </div>
             </div>
