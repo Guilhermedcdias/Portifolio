@@ -20,24 +20,30 @@
     flex-direction: row;
 
     .column1 {
-        margin-top: 2rem;
         width: 23%;
+        margin-top: 2rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        // padding-right: 1rem;
-        border-right: 1px solid #fff;
+        flex-direction: row;
 
-        .logos {
-            i {
-                img {
-                    width: 2rem;
-                    height: auto;
+        .cima {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 70%;
+            padding-right: 1rem;
+            border-right: 1px solid #fff;
+
+            .logos {
+                i {
+                    img {
+                        width: 2rem;
+                        height: auto;
+                    }
+
+
                 }
-
-
             }
         }
     }
@@ -57,6 +63,82 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+
+@media(max-width: 400px) {
+    .footer {
+        flex-direction: row;
+
+        .column1 {
+            width: 55%;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            height: 100%;
+            border-right:1px  solid #fff;
+            
+            .cima {
+                margin-top: 2rem;
+                width: 100%;
+                border-right: none;
+                padding-right: 1rem;
+
+                h3 {
+                    font-size: 1.18rem;
+                }
+
+                .logos {
+                    i {
+                        img {
+                            width: 1.78rem;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .baixo{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 1rem;
+                margin-top: 2rem;
+                // border-right: 1px solid #fff;
+
+                .logos {
+                    i {
+                        margin-left: .1rem;
+                        img {
+                            width: 1.78rem;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .column3 {
+            width: 45%;
+
+            .linksMobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+
+                a {
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
 }
