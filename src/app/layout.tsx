@@ -4,6 +4,11 @@ import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+// No seu componente ou no _app.tsx
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,8 +27,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   )
 }
