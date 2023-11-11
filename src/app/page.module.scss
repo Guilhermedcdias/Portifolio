@@ -715,7 +715,7 @@
         margin-right: 2rem;
 
         h1 {
-          font-size: 2.4rem;
+          font-size: 1.8rem;
           font-weight: 700;
           color: #000000;
           text-align: center;
@@ -731,7 +731,7 @@
 
         .p1 {
           // retirando linha do after
-          font-size: 1.2rem;
+          font-size: 1rem;
           text-transform: uppercase;
           margin-bottom: 0;
           padding-bottom: 0;
@@ -749,16 +749,18 @@
         .p2 {
           // retirando linha do after
           color: #ff0000;
-          width: 90%;
-          padding: 1rem;
-          padding-top: 1.5rem;
+          width: 100%;
+          padding: 0;
+          padding-top: 0;
           background-color: #ffffff;
           border-radius: 1px;
-          border: #000000 solid 2px;
+          border: none;
+          height: 70px;
+          padding-top: .5rem;
 
           span {
             color: #a30000;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
 
 
           }
