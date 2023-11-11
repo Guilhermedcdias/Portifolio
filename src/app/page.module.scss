@@ -710,9 +710,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
         margin-bottom: 2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        // margin-left: 2rem;
+        // margin-right: 2rem;
 
         h1 {
           font-size: 1.8rem;
@@ -724,6 +725,15 @@
           // deixando tudo maiúsculo
           text-transform: uppercase;
 
+          &::after {
+            content: '';
+            display: block;
+            width: 40%;
+            height: 2px;
+            background-color: #000000;
+            margin: 2rem auto;
+          }
+
           span {
             color: #a30000;
           }
@@ -731,7 +741,7 @@
 
         .p1 {
           // retirando linha do after
-          font-size: 1rem;
+          font-size: .9rem;
           text-transform: uppercase;
           margin-bottom: 0;
           padding-bottom: 0;
