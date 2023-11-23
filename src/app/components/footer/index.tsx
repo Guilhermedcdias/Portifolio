@@ -53,10 +53,10 @@ export default function Footer() {
             <div className={styles.column3}>
                 <div className={styles.linksMobile}>
                     <a href="/">Curriculo</a>
-                    <a href="/sobre">Sobre</a>
+                    {/* <a href="/sobre">Sobre</a> */}
                     <a href="/portifolio">Projetos</a>
-                    <a href="/experiencia">Experiencia</a>
-                    <a href="/certificacoes">Certificados</a>
+                    {/* <a href="/experiencia">Experiencia</a> */}
+                    {/* <a href="/certificacoes">Certificados</a> */}
                     <a href="/contato">Contato</a>
                 </div>
             </div>
@@ -103,10 +103,10 @@ export default function Footer() {
             <div className={styles.column3a}>
                 <div className={styles.linksMobile}>
                     <a href="/">Curriculo</a>
-                    <a href="/sobre">Sobre</a>
+                    {/* <a href="/sobre">Sobre</a> */}
                     <a href="/portifolio">Projetos</a>
-                    <a href="/experiencia">Experiencia</a>
-                    <a href="/certificacoes">Certificados</a>
+                    {/* <a href="/experiencia">Experiencia</a> */}
+                    {/* <a href="/certificacoes">Certificados</a> */}
                     <a href="/contato">Contato</a>
                 </div>
             </div>
@@ -114,15 +114,15 @@ export default function Footer() {
                 <div className={styles.esquerda}>
                     <div className={styles.linksMobile}>
                         <a href="/">Curriculo</a>
-                        <a href="/sobre">Sobre</a>
+                        {/* <a href="/sobre">Sobre</a> */}
                         <a href="/portifolio">Projetos</a>
+                        <a href="/contato">Contato</a>
                     </div>
                 </div>
                 <div className={styles.direita}>
                     <div className={styles.linksMobile}>
-                        <a href="/experiencia">Experiencia</a>
-                        <a href="/certificacoes">Certificados</a>
-                        <a href="/contato">Contato</a>
+                        {/* <a href="/experiencia">Experiencia</a> */}
+                        {/* <a href="/certificacoes">Certificados</a> */}
                     </div>
                 </div>
             </div>
