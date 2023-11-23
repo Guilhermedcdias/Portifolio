@@ -29,9 +29,27 @@ export default function Curriculo() {
                                 <div className={styles.direita}>
                                     <div className={styles.item}>
                                         <div className={styles.tecnologia}>
-                                            <h5><p className={styles.esquerda}>PHP</p><p className={styles.direita}>Conhecimento Médio</p></h5>
+                                            <h5><p className={styles.esquerda}>Java</p><p className={styles.direita}>Conhecimento Médio</p></h5>
                                             <div className={styles.barra}>
-                                                <div className={styles.php}></div>
+                                                <div className={styles.java}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>JavaScript</p><p className={styles.direita}>Conhecimento Alto</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.js}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>TypeScript</p><p className={styles.direita}>Conhecimento Alto</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.ts}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -45,27 +63,46 @@ export default function Curriculo() {
                                         </div>
                                     </div>
 
-                                    <div className={styles.item}>
-                                        <div className={styles.tecnologia}>
-                                            <h5><p className={styles.esquerda}>PHP</p><p className={styles.direita}>Conhecimento Médio</p></h5>
-                                            <div className={styles.barra}>
-                                                <div className={styles.php}></div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div className={styles.item}>
-                                        <div className={styles.tecnologia}>
-                                            <h5><p className={styles.esquerda}>PHP</p><p className={styles.direita}>Conhecimento Médio</p></h5>
-                                            <div className={styles.barra}>
-                                                <div className={styles.php}></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
                                 </div>
-                                <div className={styles.esquerda}></div>
+                                <div className={styles.esquerda}>
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>Python</p><p className={styles.direita}>Conhecimento Alto</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.py}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>VueJs</p><p className={styles.direita}>Conhecimento Medio</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.vue}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>React</p><p className={styles.direita}>Conhecimento Alto</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.react}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>React Native</p><p className={styles.direita}>Conhecimento Médio</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.reactnative}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
