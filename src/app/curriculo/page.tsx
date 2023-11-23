@@ -63,6 +63,24 @@ export default function Curriculo() {
                                         </div>
                                     </div>
 
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>MySQL</p><p className={styles.direita}>Conhecimento Alto</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.mysql}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>OracleDB</p><p className={styles.direita}>Conhecimento Baixo</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.oracle}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                 </div>
                                 <div className={styles.esquerda}>
@@ -98,6 +116,24 @@ export default function Curriculo() {
                                             <h5><p className={styles.esquerda}>React Native</p><p className={styles.direita}>Conhecimento Médio</p></h5>
                                             <div className={styles.barra}>
                                                 <div className={styles.reactnative}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>MongoDB</p><p className={styles.direita}>Conhecimento Médio</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.mongo}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.item}>
+                                        <div className={styles.tecnologia}>
+                                            <h5><p className={styles.esquerda}>DynamoDB</p><p className={styles.direita}>Conhecimento Médio</p></h5>
+                                            <div className={styles.barra}>
+                                                <div className={styles.dynamo}></div>
                                             </div>
                                         </div>
                                     </div>
