@@ -71,18 +71,18 @@ export default function Navbar() {
                 </div>
                 <div className={isActive ? styles.none : styles.linksMobile}>
                     <a href="/curriculo">Curriculo</a>
-                    <a href="/sobre">Sobre</a>
+                    {/* <a href="/sobre">Sobre</a> */}
                     <a href="/portifolio">Projetos</a>
-                    <a href="/experiencia">Experiencia</a>
-                    <a href="/certificacoes">Certificados</a>
+                    {/* <a href="/experiencia">Experiencia</a> */}
+                    {/* <a href="/certificacoes">Certificados</a> */}
                     <a href="/contato">Contato</a>
                 </div>
                 <div className={isActive ? styles.links : styles.none}>
                     <a href="/curriculo">Curriculo</a>
-                    <a href="/sobre">Sobre</a>
+                    {/* <a href="/sobre">Sobre</a> */}
                     <a href="/portifolio">Projetos</a>
-                    <a href="/experiencia">Experiencia</a>
-                    <a href="/certificacoes">Certificados</a>
+                    {/* <a href="/experiencia">Experiencia</a> */}
+                    {/* <a href="/certificacoes">Certificados</a> */}
                     <a href="/contato">Contato</a>
                 </div>
             </div>
