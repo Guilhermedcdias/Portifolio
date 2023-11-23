@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <section className={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.column1}>
                 <div className={styles.cima}>
                     <h3>Guilherme Duarte</h3>
@@ -126,7 +126,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
     )
 }

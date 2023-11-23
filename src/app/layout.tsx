@@ -2,12 +2,11 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
 // No seu componente ou no _app.tsx
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import Hotjar from '@hotjar/browser';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,12 +21,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const siteId = 3747665;
+  const hotjarVersion = 6;
+
+  Hotjar.init(siteId, hotjarVersion);
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )

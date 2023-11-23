@@ -50,7 +50,9 @@ export default function Navbar() {
         <section className={styles.navbar}>
             <div className={styles.conteudo}>
                 <div className={isActive ? styles.logo : styles.none}>
-                    <TypeIt options={{ loop: true, speed: 150 }} getBeforeInit={(instance) => beforeInit(instance)} />
+                    <a href="/" className="text-decoration-none">
+                        <TypeIt options={{ loop: true, speed: 150 }} getBeforeInit={(instance) => beforeInit(instance)} />
+                    </a>
                 </div>
                 <div className={styles.menu} onClick={() => mudanavbar()}>
                     <div className={styles.menuIcon}>
@@ -67,16 +69,16 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <div className={isActive? styles.none : styles.linksMobile}>
-                    <a href="/">Curriculo</a>
+                <div className={isActive ? styles.none : styles.linksMobile}>
+                    <a href="/curriculo">Curriculo</a>
                     <a href="/sobre">Sobre</a>
                     <a href="/portifolio">Projetos</a>
                     <a href="/experiencia">Experiencia</a>
                     <a href="/certificacoes">Certificados</a>
                     <a href="/contato">Contato</a>
                 </div>
-                <div className={isActive? styles.links : styles.none}>
-                    <a href="/">Curriculo</a>
+                <div className={isActive ? styles.links : styles.none}>
+                    <a href="/curriculo">Curriculo</a>
                     <a href="/sobre">Sobre</a>
                     <a href="/portifolio">Projetos</a>
                     <a href="/experiencia">Experiencia</a>
