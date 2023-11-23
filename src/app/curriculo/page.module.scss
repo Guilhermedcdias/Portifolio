@@ -5,7 +5,7 @@
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
-    height: 300vh;
+    height: 360vh;
     background-color: rgb(255, 255, 255);
 }
 
@@ -15,6 +15,7 @@
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
     padding: 2rem;
+    padding-bottom: 0;
     width: 95%;
 
     .div {
@@ -436,6 +437,55 @@
     }
 }
 
+.parte5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    width: 100%;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .experiencia {
+            width: 100%;
+            margin: 1rem;
+
+            h5 {
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                margin-bottom: 1rem;
+
+                p {
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    color: rgb(0, 0, 0);
+                    margin-bottom: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
 
 .justificar {
     text-align: justify;
@@ -447,4 +497,8 @@
 
 .bold {
     font-weight: bold;
+}
+
+.textMenor {
+    font-size: 1.1rem !important;
 }

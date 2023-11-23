@@ -1,5 +1,8 @@
 import BaseLayout from '../components/BaseLayout';
 import styles from './page.module.scss';
+import { FaBuilding, FaCalendarAlt } from "react-icons/fa";
+import { PiOfficeChairFill } from "react-icons/pi";
+
 
 export default function Curriculo() {
     return (
@@ -158,6 +161,28 @@ export default function Curriculo() {
                                     <p>Inglês - Básico</p>
                                     <p>Português - Nativo</p>
                                 </h5>
+                            </div>
+                        </div>
+                        <div className={styles.parte5}>
+                            <h3 className={`${styles.textoPreto} ${styles.bold}`}>Experiência Profissional</h3>
+                            <div className={styles.row}>
+                                <div className={styles.experiencia}>
+                                    <h5 className={`${styles.textoPreto} ${styles.bold}`}><FaBuilding /> VirtualMarket - Food Soluctions</h5>
+                                    <h5 className={`${styles.textoPreto} ${styles.bold} ${styles.textMenor}`}><PiOfficeChairFill /> Cargo: Desenvolvedor Full Stack</h5>
+                                    <h5 className={`${styles.textoPreto} ${styles.bold} ${styles.textMenor}`}><FaCalendarAlt /> Periodo de Atuação: Março 2022 - Atualmente</h5>
+                                    <h5 className={`${styles.justificar} ${styles.textoPreto}`}>
+                                        <p>Desenvolvimento de aplicações web e mobile com React, React Native, Vue.js, Express, Laravel, Bootstrap, Next.js, Serverless, DynamoDB, MongoDB, MySQL, OracleDB, JavaScript, TypeScript, HTML e CSS.</p>
+                                    </h5>
+                                </div>
+
+                                <div className={styles.experiencia}>
+                                    <h5 className={`${styles.textoPreto} ${styles.bold}`}><FaBuilding /> Performa Comunicação</h5>
+                                    <h5 className={`${styles.textoPreto} ${styles.bold} ${styles.textMenor}`}><PiOfficeChairFill /> Desenvolvedor Full Stack</h5>
+                                    <h5 className={`${styles.textoPreto} ${styles.bold} ${styles.textMenor}`}><FaCalendarAlt /> Periodo de Atuação: Julho 2021 - Março 2022</h5>
+                                    <h5 className={`${styles.justificar} ${styles.textoPreto}`}>
+                                        <p>Desenvolvimento de aplicações web e mobile com Bootstrap, HTML, CSS, JS.</p>
+                                    </h5>
+                                </div>
                             </div>
                         </div>
                     </div>
