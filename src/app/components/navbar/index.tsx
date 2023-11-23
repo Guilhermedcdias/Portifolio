@@ -5,7 +5,6 @@ import TypeIt from "typeit-react";
 import { motion } from "framer-motion";
 import { BsList } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import { Stint_Ultra_Condensed } from "next/font/google";
 
 
 export default function Navbar() {
