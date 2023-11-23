@@ -24,7 +24,7 @@ export default function Curriculo() {
 
                         </div>
                         <div className={styles.parte3}>
-                            <h3 className={`${styles.textoPreto} ${styles.bold}`}>Habilidades Técnicas</h3>
+                            <h3 className={`${styles.textoPreto} ${styles.bold}`}>Hard Skills</h3>
                             <div className={styles.row}>
                                 <div className={styles.direita}>
                                     <div className={styles.item}>
@@ -139,6 +139,25 @@ export default function Curriculo() {
                                     </div>
 
                                 </div>
+                            </div>
+                        </div>
+                        <div className={styles.parte4}>
+                            <div className={styles.esquerda}>
+                                <h3 className={`${styles.textoPreto} ${styles.bold}`}>Soft Skills</h3>
+                                <h5 className={`${styles.justificar} ${styles.textoPreto}`}>
+                                    <p>Comunicação Efetiva</p>
+                                    <p>Resolução de Conflitos</p>
+                                    <p>Trabalho em Equipe</p>
+                                    <p>Proatividade</p>
+                                    <p>Criatividade</p>
+                                </h5>
+                            </div>
+                            <div className={styles.direita}>
+                                <h3 className={`${styles.textoPreto} ${styles.bold}`}>Idiomas</h3>
+                                <h5 className={`${styles.justificar} ${styles.textoPreto}`}>
+                                    <p>Inglês - Básico</p>
+                                    <p>Português - Nativo</p>
+                                </h5>
                             </div>
                         </div>
                     </div>

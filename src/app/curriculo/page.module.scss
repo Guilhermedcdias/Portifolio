@@ -120,7 +120,7 @@
         flex-wrap: nowrap;
         width: 100%;
         margin-bottom: 1rem;
-        margin-top: 3rem;
+        // margin-top: 3rem;
 
         .direita {
             display: flex;
@@ -344,6 +344,95 @@
             }
 
         }
+    }
+}
+
+.parte4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    padding: 4rem;
+    width: 100%;
+
+    .direita {
+        width: 50%;
+        margin: 1rem;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            margin-bottom: 2rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        h5 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            // margin-bottom: 3rem;
+
+            p {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                margin-bottom: 1rem;
+
+                &::before {
+                    content: "->";
+                    color: #000;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    // margin-left: -.5em;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+
+    .esquerda {
+        width: 50%;
+        margin: 1rem;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            margin-bottom: 2rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        h5 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            // margin-bottom: 3rem;
+
+            p {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                margin-bottom: 1rem;
+
+                &::before {
+                    content: "->";
+                    color: #000;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    // margin-left: -.5em;
+                    margin-right: .5rem;
+                }
+            }
+
+        }
+
     }
 }
 
