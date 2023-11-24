@@ -13,7 +13,7 @@ export default function Contato() {
     const [mensagem, setMensagem] = useState('')
 
     const enviarEmail = async (nome: string, email: string, telefone: string, assunto: string, mensagem: string) => {
-        const response = await fetch('/api/sendEmail', {
+        const response = await fetch('https://portifolio.guilhermedcdias.vercel.app/api/sendEmail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

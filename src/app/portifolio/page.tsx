@@ -1,20 +1,67 @@
+'use client'
 import Image from "next/image";
 import BaseLayout from "../components/BaseLayout";
 import SwiperCoverflow from "../components/swiper";
 import styles from './page.module.scss'
+import { useEffect, useState } from "react";
+import ModalComponent from "../components/modal";
+
+import projetos from '../../data/projetos.json';
+import Card from "../components/card";
+
+interface cardProps {
+    title: string;
+    Projeto: string;
+    Descricao: string;
+    Participacao: string;
+    url: string;
+}
 
 export default function Portifolio() {
-    const slides = [
-        <Image src="/images/foto2.png" alt="Imagem 2" width={500} height={300} />,
-        <Image src="/images/foto1.png" alt="Imagem 1" width={500} height={300} />,
-        <Image src="/images/foto3.png" alt="Imagem 3" width={500} height={300} />,
-    ]
+    const [title, setTitle] = useState('');
+    const [Projeto, setProjeto] = useState('');
+    const [Descricao, setDescricao] = useState('');
+    const [Participacao, setParticipacao] = useState('');
+    const [url, setUrl] = useState('');
+    const [show, setShow] = useState(false);
+
+    const [slides, setSlides] = useState<React.ReactNode[]>([]);
+
+    const handleShowModal = ({ title, Projeto, Descricao, Participacao, url }: cardProps) => {
+        setTitle(title);
+        setProjeto(Projeto);
+        setDescricao(Descricao);
+        setParticipacao(Participacao);
+        setUrl(url);
+        setShow(true);
+    }
+
+    const handleClose = () => setShow(false);
+
+    useEffect(() => {
+        const slidesArray = Object.values(projetos).map((projeto, index) => (
+            <Card
+                Descricao={projeto.Descricao}
+                Participacao={projeto.Participacao}
+                Projeto={projeto.Projeto}
+                handleShowModal={handleShowModal}
+                title={projeto.title}
+                url={projeto.url}
+                key={index}
+            />
+        ));
+        setSlides(slidesArray);
+    }, []);
+
     return (
         <BaseLayout>
             <div className={styles.main}>
                 <h3>Meus Projetos</h3>
                 <SwiperCoverflow slides={slides} />
             </div>
+
+
+            <ModalComponent Descricao={Descricao} Participação={Participacao} Projeto={Projeto} show={show} handleClose={handleClose} title={title} url={url} />
         </BaseLayout>
     )
 }
