@@ -1,0 +1,102 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.divPrincipal {
+    position: absolute;
+    top: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 2rem;
+    padding-bottom: 0;
+    width: 95%;
+
+    .div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        flex-wrap: nowrap;
+    }
+}
+
+
+.textCenter {
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.formulario {
+    width: 100%;
+    padding: 2rem;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin: 1rem;
+
+            label {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 100%;
+                height: 3rem;
+                border-radius: 5px;
+                border: 1px solid rgb(0, 0, 0);
+                padding: 0.5rem;
+                font-size: 1.5rem;
+            }
+
+            textarea {
+                width: 100%;
+                height: 10rem;
+                border-radius: 5px;
+                border: 1px solid rgb(0, 0, 0);
+                padding: 0.5rem;
+                font-size: 1.5rem;
+                max-height: 500px;
+            }
+
+        }
+
+        button {
+            width: 100%;
+            margin: 1rem;
+            height: 3rem;
+            border-radius: 5px;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}

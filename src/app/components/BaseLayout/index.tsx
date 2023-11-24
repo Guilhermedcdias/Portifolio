@@ -5,6 +5,8 @@ import Footer from "../footer";
 import Navbar from "../navbar";
 import styles from "./page.module.scss";
 import Hotjar from '@hotjar/browser';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 export default function BaseLayout({
     children,
@@ -23,6 +25,7 @@ export default function BaseLayout({
     return (
         <div className={styles.base}>
             <Navbar />
+            <ToastContainer />
             {children}
             <Footer />
         </div>
