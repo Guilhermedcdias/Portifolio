@@ -65,7 +65,7 @@ export default function Contato() {
                         <div className={styles.formulario}>
                             <div className={styles.row}>
                                 <div className={styles.campo}>
-                                    <label>Nome</label>
+                                    <label className={styles.dark}>Nome</label>
                                     <input type="text" value={nome} onChange={(e) => {
                                         e.preventDefault()
                                         setNome(e.target.value)
@@ -73,7 +73,7 @@ export default function Contato() {
                                 </div>
                                 <div className={styles.campo}>
 
-                                    <label>Email</label>
+                                    <label className={styles.dark}>Email</label>
                                     <input type="email" value={email} onChange={(e) => {
                                         e.preventDefault()
                                         setEmail(e.target.value)
@@ -84,7 +84,7 @@ export default function Contato() {
                             <div className={styles.row}>
                                 <div className={styles.campo}>
 
-                                    <label>Telefone</label>
+                                    <label className={styles.dark}>Telefone</label>
                                     <input type="text" value={telefone} onChange={(e) => {
                                         e.preventDefault()
                                         setTelefone(e.target.value)
@@ -93,7 +93,7 @@ export default function Contato() {
 
                                 <div className={styles.campo}>
 
-                                    <label>Assunto</label>
+                                    <label className={styles.dark}>Assunto</label>
                                     <input type="text" value={assunto} onChange={(e) => {
                                         e.preventDefault()
                                         setAssunto(e.target.value)
@@ -104,7 +104,7 @@ export default function Contato() {
                             <div className={styles.row}>
                                 <div className={styles.campo}>
 
-                                    <label>Mensagem</label>
+                                    <label className={styles.dark}>Mensagem</label>
                                     <textarea value={mensagem} onChange={(e) => {
                                         e.preventDefault()
                                         setMensagem(e.target.value)
