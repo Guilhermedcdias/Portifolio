@@ -18,7 +18,7 @@ export default function ModalComponent(props: IModalProps) {
             </Modal.Header>
             <Modal.Body>
                 <h2>{props.Descricao}</h2>
-                <h3>Tecnologias: {props.Projeto}</h3>
+                <h5>Tecnologias: {props.Projeto}</h5>
                 <p>{props.Participação}</p>
             </Modal.Body>
             <Modal.Footer>

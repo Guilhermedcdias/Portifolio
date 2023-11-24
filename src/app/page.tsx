@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import SwiperCoverflow from './components/swiper'
 import styles from './page.module.scss'
@@ -8,14 +9,55 @@ import FadeImageSlider from './components/swiperFadeEffect'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import BaseLayout from './components/BaseLayout'
+import { useEffect, useState } from 'react'
+import projetos from '../data/projetos.json';
+import Card from "./components/card";
+import ModalComponent from './components/modal'
+
+interface cardProps {
+  title: string;
+  Projeto: string;
+  Descricao: string;
+  Participacao: string;
+  url: string;
+}
 
 
 export default function Home() {
-  const slides = [
-    <Image src="/images/foto2.png" alt="Imagem 2" width={500} height={300} />,
-    <Image src="/images/foto1.png" alt="Imagem 1" width={500} height={300} />,
-    <Image src="/images/foto3.png" alt="Imagem 3" width={500} height={300} />,
-  ]
+  const [title, setTitle] = useState('');
+  const [Projeto, setProjeto] = useState('');
+  const [Descricao, setDescricao] = useState('');
+  const [Participacao, setParticipacao] = useState('');
+  const [url, setUrl] = useState('');
+  const [show, setShow] = useState(false);
+
+  const [slides, setSlides] = useState<React.ReactNode[]>([]);
+
+  const handleShowModal = ({ title, Projeto, Descricao, Participacao, url }: cardProps) => {
+    setTitle(title);
+    setProjeto(Projeto);
+    setDescricao(Descricao);
+    setParticipacao(Participacao);
+    setUrl(url);
+    setShow(true);
+  }
+
+  const handleClose = () => setShow(false);
+
+  useEffect(() => {
+    const slidesArray = Object.values(projetos).map((projeto, index) => (
+      <Card
+        Descricao={projeto.Descricao}
+        Participacao={projeto.Participacao}
+        Projeto={projeto.Projeto}
+        handleShowModal={handleShowModal}
+        title={projeto.title}
+        url={projeto.url}
+        key={index}
+      />
+    ));
+    setSlides(slidesArray);
+  }, []);
 
   return (
     <BaseLayout>
@@ -48,6 +90,9 @@ export default function Home() {
           <SwiperCoverflow slides={slides} />
         </div>
       </main>
+
+      <ModalComponent Descricao={Descricao} Participação={Participacao} Projeto={Projeto} show={show} handleClose={handleClose} title={title} url={url} />
+
     </BaseLayout>
 
   )
