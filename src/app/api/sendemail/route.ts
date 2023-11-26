@@ -4,13 +4,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
   // Rodar o CORS antes de prosseguir
 
   return new Response('Hello')
 }
 
-export async function POST(req: Request, res: NextApiResponse) {
+export async function POST(req: Request) {
   const { nome, email, telefone, assunto, mensagem } = await req.json();
 
 
