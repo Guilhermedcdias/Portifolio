@@ -3,6 +3,7 @@ import { useState } from "react";
 import BaseLayout from "../components/BaseLayout";
 import styles from './page.module.scss';
 import { toast } from 'react-toastify';
+import axios from "axios";
 
 export default function Contato() {
     const [nome, setNome] = useState('')
@@ -12,57 +13,23 @@ export default function Contato() {
     const [mensagem, setMensagem] = useState('')
 
     const enviarEmail = async (nome: string, email: string, telefone: string, assunto: string, mensagem: string) => {
-        const ambiente = window.location
-        // verificando se ambiente é localhost ou um ip
-        if (ambiente.hostname === 'localhost' || ambiente.hostname.includes('192.168') || ambiente.hostname.includes('10.0') || ambiente.hostname.includes('127.0') || ambiente.hostname.includes('0.0') || ambiente.hostname.includes('::1')) {
+        const response = await axios.post('https://portifolio.guilhermedcdias.vercel.app/api/sendemail', {
+            nome: nome,
+            email: email,
+            telefone: telefone,
+            assunto: assunto,
+            mensagem: mensagem
+        });
 
-            const response = await fetch('http://localhost:3000/api/sendemail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    nome: nome,
-                    email: email,
-                    telefone: telefone,
-                    assunto: assunto,
-                    mensagem: mensagem
-                }),
-            });
-            const data = await response.json();
+        const data = await response.data();
 
-            if (response.status === 200) {
-                toast.success(data.message);
-            } else {
-                toast.error(data.message);
-            }
-
-            return data.status === 200 ? true : false;
+        if (response.status === 200) {
+            toast.success(data.message);
         } else {
-            const response = await fetch('https://portifolio.guilhermedcdias.vercel.app/api/sendemail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    nome: nome,
-                    email: email,
-                    telefone: telefone,
-                    assunto: assunto,
-                    mensagem: mensagem
-                }),
-            });
-            const data = await response.json();
-
-            if (response.status === 200) {
-                toast.success(data.message);
-            } else {
-                toast.error(data.message);
-            }
-
-            return data.status === 200 ? true : false;
+            toast.error(data.message);
         }
 
+        return data.status === 200 ? true : false;
     }
 
     const verifica = () => {
