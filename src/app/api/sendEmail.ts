@@ -10,17 +10,16 @@ const cors = Cors({
 });
 
 // Função auxiliar para rodar o middleware do CORS
-function runMiddleware(req, res, fn) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result) => {
+function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: (req: NextApiRequest, res: NextApiResponse, next: (result: any) => void) => void) {
+  return new Promise<void>((resolve, reject) => {
+    fn(req, res, (result: any) => {
       if (result instanceof Error) {
         return reject(result);
       }
-      return resolve(result);
+      return resolve();
     });
   });
 }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Rodar o CORS antes de prosseguir
   await runMiddleware(req, res, cors);
