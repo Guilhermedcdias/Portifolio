@@ -104,3 +104,48 @@
 .dark {
     color: black;
 }
+
+
+@media (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        min-height: 10vh;
+        height: 50vh;
+        background-color: white;
+    }
+
+    .divPrincipal {
+        position: absolute;
+        top: 40%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 2rem;
+        padding-bottom: 0;
+        width: 95%;
+
+        .div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .formulario {
+        .row {
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media(max-width: 768px) {
+    .main {
+        height: 80vh;
+    }
+}

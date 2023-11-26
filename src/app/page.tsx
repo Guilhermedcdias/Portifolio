@@ -104,8 +104,12 @@ export default function Home() {
               </span></p>
               {/* botão pequeno a direita */}
               <div className={styles.btn}>
-                <button><HiDocument />Curriculum</button>
-                <button><BsWhatsapp />Entrar em Contato</button>
+                <a href="/curriculo">
+                  <button><HiDocument />Curriculum</button>
+                </a>
+                <a href="/contato">
+                  <button><BsWhatsapp />Entrar em Contato</button>
+                </a>
               </div>
               <p className={styles.p3}></p>
             </div>
