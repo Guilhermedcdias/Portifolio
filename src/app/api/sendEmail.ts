@@ -1,8 +1,30 @@
 // pages/api/sendEmail.js
 import nodemailer from 'nodemailer';
+import Cors from 'cors';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+// Configurando o CORS
+const cors = Cors({
+  methods: ['POST'], // Apenas o método POST é permitido
+  origin: '*', // Aqui você pode especificar o domínio ou deixar '*' para todos
+});
+
+// Função auxiliar para rodar o middleware do CORS
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+      return resolve(result);
+    });
+  });
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Rodar o CORS antes de prosseguir
+  await runMiddleware(req, res, cors);
+
   if (req.method === 'POST') {
     const { nome, email, telefone, assunto, mensagem } = req.body;
 
