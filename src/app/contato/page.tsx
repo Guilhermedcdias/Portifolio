@@ -3,7 +3,6 @@ import { useState } from "react";
 import BaseLayout from "../components/BaseLayout";
 import styles from './page.module.scss';
 import { toast } from 'react-toastify';
-import nodemailer from "nodemailer";
 
 export default function Contato() {
     const [nome, setNome] = useState('')
@@ -13,12 +12,18 @@ export default function Contato() {
     const [mensagem, setMensagem] = useState('')
 
     const enviarEmail = async (nome: string, email: string, telefone: string, assunto: string, mensagem: string) => {
-        const response = await fetch('https://portifolio.guilhermedcdias.vercel.app/api/sendEmail', {
+        const response = await fetch('https://portifolio.guilhermedcdias.vercel.app/api/sendemail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ nome, email, telefone, assunto, mensagem }),
+            body: JSON.stringify({
+                nome: nome,
+                email: email,
+                telefone: telefone,
+                assunto: assunto,
+                mensagem: mensagem
+            }),
         });
 
         const data = await response.json();
