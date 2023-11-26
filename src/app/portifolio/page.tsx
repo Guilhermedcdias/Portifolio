@@ -80,8 +80,10 @@ export default function Portifolio() {
     return (
         <BaseLayout>
             <div className={styles.main}>
-                <h3>Meus Projetos</h3>
-                <SwiperCoverflow slides={slides} />
+                <div className={styles.carousel}>
+                    <h3>Meus Projetos</h3>
+                    <SwiperCoverflow slides={slides} />
+                </div>
             </div>
 
 
